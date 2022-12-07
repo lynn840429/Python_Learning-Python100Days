@@ -6,7 +6,7 @@ Author: 骆昊
 Date: 2018-03-05
 """
 
-
+### gcd M1
 def gcd(x, y):
     if x > y:
         (x, y) = (y, x)
@@ -15,10 +15,23 @@ def gcd(x, y):
             return factor
     return 1
 
+print(gcd(15, 27))
 
+### gcd M2
+import math
+
+print(math.gcd(15, 27))
+
+### gcd M3
+def computeGCD(x, y):
+    while(y):
+       x, y = y, x % y
+    return abs(x)
+
+print(computeGCD(15, 27))
+
+### lcm
 def lcm(x, y):
     return x * y // gcd(x, y)
 
-
-print(gcd(15, 27))
 print(lcm(15, 27))
