@@ -17,7 +17,7 @@ import time
 def play_animation():
     canvas.move(oval, 2, 2)
     canvas.update()
-    top.after(50, play_animation)
+    top.after(5, play_animation)
 
 
 x = 10
@@ -29,7 +29,7 @@ top.resizable(False, False)
 top.wm_attributes('-topmost', 1)
 canvas = tkinter.Canvas(top, width=600, height=600, bd=0, highlightthickness=0)
 canvas.create_rectangle(0, 0, 600, 600, fill='gray')
-oval = canvas.create_oval(10, 10, 60, 60, fill='red')
+oval = canvas.create_oval(10, 10, 30, 30, fill='red')
 canvas.pack()
 top.update()
 play_animation()
